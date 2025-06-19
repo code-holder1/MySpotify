@@ -48,7 +48,7 @@ async function album() {
       cardContainer.innerHTML += `
       <div data-folder="${alb}" class="card">
               <div class="play">
-                <img src="../svgs/play.svg" alt="play" />
+                <img src="svgs/play.svg" alt="play" />
               </div>
               <img
                 src="../Songs/${alb}/cover.jpeg"
@@ -95,7 +95,7 @@ async function render() {
       SongUL.innerHTML +
       `<li>
               <div class="songTitle">
-                <img src="../svgs/music.svg" alt="music" />
+                <img src="svgs/music.svg" alt="music" />
                 <div class="info">
                   <div>${song}</div>
                   <div>Naveed</div>
@@ -103,7 +103,7 @@ async function render() {
               </div>
               <div class="playNow flex align-center justify-center">
                 <span>Play now</span>
-                <img class="invert" src="../svgs/play.svg" alt="play" />
+                <img class="invert" src="svgs/play.svg" alt="play" />
               </div>
             </li>`;
   }
