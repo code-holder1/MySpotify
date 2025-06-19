@@ -44,7 +44,8 @@ async function album() {
     if (e.href.includes("/Songs/")) {
       let parts = e.href.split("/");
       let alb = parts[parts.length - 2]; // ✅ this gets 'mySongs'
-
+      console.log(e.href);
+      console.log(alb);
       let a = await fetch(`/Songs/${alb}/info.json`);
       let response = await a.json();
       cardContainer.innerHTML += `
