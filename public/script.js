@@ -161,30 +161,26 @@ async function main() {
   });
 
   previous.addEventListener("click", () => {
-    let currentFile = decodeURIComponent(
-      currentSong.src.split("/Songs/").slice(-1)[0]
-    );
-    let index = songs.indexOf(currentFile);
+  let currentFile = decodeURIComponent(currentSong.src.split("/").pop());
+  let index = songs.indexOf(currentFile);
 
-    if (index - 1 >= 0) {
-      playMusic(songs[index - 1]);
-    } else {
-      playMusic(songs[songs.length - 1]);
-    }
-  });
+  if (index - 1 >= 0) {
+    playMusic(songs[index - 1]);
+  } else {
+    playMusic(songs[songs.length - 1]);
+  }
+});
 
-  next.addEventListener("click", () => {
-    let currentFile = decodeURIComponent(
-      currentSong.src.split("/Songs/").slice(-1)[0]
-    );
-    let index = songs.indexOf(currentFile);
+next.addEventListener("click", () => {
+  let currentFile = decodeURIComponent(currentSong.src.split("/").pop());
+  let index = songs.indexOf(currentFile);
 
-    if (index + 1 < songs.length) {
-      playMusic(songs[index + 1]);
-    } else {
-      playMusic(songs[0]);
-    }
-  });
+  if (index + 1 < songs.length) {
+    playMusic(songs[index + 1]);
+  } else {
+    playMusic(songs[0]);
+  }
+});
 
   document.querySelector(".volume-div input").addEventListener("input", (e) => {
     let value = e.target.value / 100;
