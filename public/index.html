@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="utility.css" />
+    <title>MySpotify - My Web Player</title>
+  </head>
+  <body>
+    <header class="header align-center justify-space-between flex">
+      <div class="logo">
+        <img width="32px" class="pointer" src="../svgs/logo.svg" alt="logo" />
+      </div>
+      <div class="centre flex justify-space-between align-center gap-1">
+        <div class="home flex align-center justify-center bg-gray">
+          <img class="pointer" width="24px" src="../svgs/home.svg" alt="home" />
+        </div>
+        <div class="search flex bg-gray gap-1 align-center justify-center">
+          <img
+            width="24px"
+            src="../svgs/search.svg"
+            class="pointer"
+            alt="search"
+          />
+          <input
+            type="text"
+            placeholder="What do you want to play?"
+            class="search-input bg-gray"
+          />
+          <img
+            width="24px"
+            class="pointer cart"
+            src="../svgs/cart.svg"
+            alt="cart"
+          />
+        </div>
+      </div>
+      <div class="login flex align-center gap-1">
+        <div class="pointer sign highlight">Sign up</div>
+        <span class="login pointer">Log in</span>
+      </div>
+    </header>
+    <div class="container flex">
+      <div class="left bg-darkgray rounded m-1 p-1">
+        <div class="top flex justify-space-between align-center">
+          <span>Your Library</span
+          ><img class="pointer R" width="20px" src="../svgs/plus.svg" alt="plus" />
+        </div>
+        <div class="songList">
+          <ul></ul>
+        </div>
+        <div class="footer">
+          <div>
+            <a href="https://www.spotify.com/pk-en/legal/"
+              ><span>Legal</span></a
+            >
+          </div>
+          <div>
+            <a href="https://www.spotify.com/pk-en/safetyandprivacy/"
+              ><span>Safety &amp; Privacy Center</span></a
+            >
+          </div>
+          <div>
+            <a href="https://www.spotify.com/pk-en/legal/privacy-policy/"
+              ><span>Privacy Policy</span></a
+            >
+          </div>
+          <div>
+            <a href="https://www.spotify.com/pk-en/legal/cookies-policy/"
+              ><span>Cookies</span></a
+            >
+          </div>
+          <div>
+            <a href="https://www.spotify.com/pk-en/legal/privacy-policy/#s3"
+              ><span>About Ads</span></a
+            >
+          </div>
+          <div>
+            <a href="https://www.spotify.com/pk-en/accessibility/"
+              ><span>Accessibility</span></a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="right bg-darkgray rounded m-1 p-1">
+        <div class="trendingSongs">
+          <div class="flex">
+            <img class="hamburger" src="../svgs/hamburger.svg" alt="menu" />
+            <h1>Trending Songs</h1>
+          </div>
+          <div class="cardContainer"></div>
+        </div>
+        <div class="player">
+          <div class="seekbar pointer">
+            <div class="circle grab"></div>
+          </div>
+          <div class="volume-div flex gap-1">
+            <input class="pointer" type="range" name="vol" id="volRange" />
+            <img id="vol" class="pointer" src="../svgs/volume.svg" alt="vol" />
+          </div>
+          <div class="barTop">
+            <div class="songInfo"></div>
+            <div class="songTime"></div>
+          </div>
+          <div class="playButtons">
+            <img
+              id="previous"
+              class="invert pointer"
+              src="../svgs/preSong.svg"
+              alt="preSong"
+            />
+            <img
+              id="play"
+              class="invert pointer"
+              src="../svgs/play.svg"
+              alt="play"
+            />
+            <img
+              id="next"
+              class="invert pointer"
+              src="../svgs/NextSong.svg"
+              alt="NextSong"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
